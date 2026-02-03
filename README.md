@@ -1,5 +1,7 @@
 AWS Three‑Tier Web Architecture Project 🏗️
 
+Documentation - https://github.com/AqibHudaSyed/Projects/blob/main/AWS%20Three-tier%20project.pdf
+
 This repository contains the source code and documentation for a scalable, highly available, and fault-tolerant three-tier web application on AWS.
 
 The project demonstrates how to build a three-tier architecture using core AWS services and best practices for cloud applications.
