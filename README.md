@@ -1,31 +1,82 @@
-# AWS Three Tier Web Architecture Workshop
+AWS Three‑Tier Web Architecture Project 🏗️
 
-## Description: 
-This workshop is a hands-on walk through of a three-tier web architecture in AWS. We will be manually creating the necessary network, security, app, and database components and configurations in order to run this architecture in an available and scalable manner.
+This repository contains the source code and documentation for a scalable, highly available, and fault-tolerant three-tier web application on AWS.
 
-## Audience:
-Although this is an introductory level workshop, it is intended for those who have a technical role. The assumption is that you have at least some foundational aws knowledge around VPC, EC2, RDS, S3, ELB and the AWS Console.  
+The project demonstrates how to build a three-tier architecture using core AWS services and best practices for cloud applications.
 
-## Pre-requisites:
-1. An AWS account. If you don’t have an AWS account, follow the instructions [here](https://aws.amazon.com/console/) and
-click on “Create an AWS Account” button in the top right corner to create one.
-1. IDE or text editor of your choice.
+📌 Architecture Overview
 
-## Architecture Overview
-![Architecture Diagram](https://github.com/aws-samples/aws-three-tier-web-architecture-workshop/blob/main/application-code/web-tier/src/assets/3TierArch.png)
+The project implements a three-tier cloud application with the following layers:
 
-In this architecture, a public-facing Application Load Balancer forwards client traffic to our web tier EC2 instances. The web tier is running Nginx webservers that are configured to serve a React.js website and redirects our API calls to the application tier’s internal facing load balancer. The internal facing load balancer then forwards that traffic to the application tier, which is written in Node.js. The application tier manipulates data in an Aurora MySQL multi-AZ database and returns it to our web tier. Load balancing, health checks and autoscaling groups are created at each layer to maintain the availability of this architecture.
+Web Tier
 
-## Workshop Instructions:
+Hosts static and dynamic web content
 
-See [AWS Three Tier Web Architecture](https://catalog.us-east-1.prod.workshops.aws/workshops/85cd2bb2-7f79-4e96-bdee-8078e469752a/en-US)
+Uses Nginx on EC2 to serve UI and proxy API calls
 
+Application Tier
 
-## Security
+Handles business logic
 
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+Runs a Node.js backend behind an internal Load Balancer
 
-## License
+Database Tier
 
-This library is licensed under the MIT-0 License. See the LICENSE file.
+Stores persistent data in Amazon Aurora MySQL (Multi‑AZ)
 
+Traffic flow:
+
+Users access the application via a public Application Load Balancer (ALB)
+
+ALB forwards requests to the Web Tier EC2 instances
+
+Web Tier proxies API calls to the internal load balancer → Application Tier
+
+App Tier queries the Aurora MySQL database and returns results to the web tier
+
+The architecture includes Auto Scaling, Health Checks, and Security Groups to ensure redundancy, resiliency, and secure communication between tiers.
+
+🛠️ Features
+
+✔ Highly Available — multiple EC2 instances managed by Auto Scaling
+✔ Fault Tolerant — multi‑AZ database setup with Aurora
+✔ Scalable — Load Balancing and Auto Scaling between the tiers
+✔ Secure — VPC with public/private subnets and tightly scoped security groups
+✔ Hands-On Implementation — full end-to-end deployment on AWS
+
+🧾 Contents
+├── app-tier/           # Node.js backend API
+├── web-tier/           # HTML/React UI + Nginx config
+├── nginx.conf          # Web server reverse proxy config
+├── README.md           # Project overview (this file)
+└── architecture.png    # Diagram of the 3-tier setup (optional)
+
+🚀 Getting Started
+
+Clone this repo
+
+Set up AWS resources:
+
+Custom VPC with public/private subnets
+
+EC2 instances for web and app tiers
+
+Application and internal load balancers
+
+Aurora MySQL cluster
+
+Configure security groups and environment variables
+
+Deploy and test the application
+
+🧠 What I've Learned
+
+Designing secure and scalable cloud architectures
+
+Creating multi-tier deployments on AWS
+
+Auto Scaling and Load Balancing fundamentals
+
+Networking with VPC, Public/Private subnets, and Security Groups
+
+Connecting application code to managed databases
