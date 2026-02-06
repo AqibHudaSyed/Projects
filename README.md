@@ -1,3 +1,5 @@
+***** This repository is a simulation of the AWS, infrastructure hardening and security orchestration projects I managed during my professional tenure (2019-2025). Since my primary work was conducted on private enterprise repositories, I have recreated this environment on AWS to demonstrate the technical methodologies and security standards I implemented *****
+
 AWS Three‑Tier Web Architecture Project 🏗️
 
 Documentation - https://github.com/AqibHudaSyed/Projects/blob/main/AWS%20Three-tier%20project.pdf
