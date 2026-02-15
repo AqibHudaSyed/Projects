@@ -1,6 +1,6 @@
 AWS Three‑Tier Web Architecture Project 🏗️
 
-
+![Uploading AWS-3-tier.png…]()
 
 Documentation - https://github.com/AqibHudaSyed/Projects/blob/main/AWS%20Three-tier%20project.pdf
 
