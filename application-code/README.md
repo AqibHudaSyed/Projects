@@ -1,5 +1,5 @@
 AWS Three‑Tier Web Architecture Project 🏗️
-<img width="2000" height="2588" alt="image" src="https://github.com/user-attachments/assets/ff0a32f6-8d45-487d-af20-72716883f781" />
+
 
 
 Documentation - https://github.com/AqibHudaSyed/Projects/blob/main/AWS%20Three-tier%20project.pdf
